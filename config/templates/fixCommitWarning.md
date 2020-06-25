@@ -13,6 +13,6 @@ Date:   Sat Mar 18 13:42:40 2017 -0700
     Fixes #51.
 ```
 
-Thank you for your contributions to Zulip!
+Thank you for your contributions
 
 <!-- fixCommitWarning -->
