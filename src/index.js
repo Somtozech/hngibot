@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const client = require("./client.js");
 const crypto = require("crypto");
 const express = require("express");
@@ -14,10 +16,10 @@ app.get("/", (req, res) => {
   res.redirect("https://github.com/zulip/zulipbot");
 });
 
-const jsonParser = express.json({limit: "50mb"});
-const urlencodedParser = express.urlencoded({extended: true});
+const jsonParser = express.json({ limit: "50mb" });
+const urlencodedParser = express.urlencoded({ extended: true });
 
-app.post("/github", jsonParser, async(req, res) => {
+app.post("/github", jsonParser, async (req, res) => {
   const secret = client.cfg.auth.webhookSecret.toString();
   const body = JSON.stringify(req.body);
   const hmac = crypto.createHmac("sha1", secret).update(body).digest("hex");
@@ -46,7 +48,7 @@ app.post("/github", jsonParser, async(req, res) => {
   res.status(202).send("Request is being processed");
 });
 
-app.post("/travis", urlencodedParser, async(req, res) => {
+app.post("/travis", urlencodedParser, async (req, res) => {
   const response = await fetch("https://api.travis-ci.org/config");
   const json = await response.json();
   const publicKey = json.config.notifications.webhook.public_key;
@@ -72,7 +74,7 @@ app.post("/travis", urlencodedParser, async(req, res) => {
   res.status(202).send("Request is being processed");
 });
 
-process.on("unhandledRejection", error => {
+process.on("unhandledRejection", (error) => {
   console.log(`Unhandled promise rejection:\n${error.stack}`);
 });
 
@@ -82,7 +84,7 @@ if (client.cfg.activity.check.interval) {
   }, client.cfg.activity.check.interval * 3600000);
 }
 
-Object.entries(client.cfg.auth).forEach(pair => {
+Object.entries(client.cfg.auth).forEach((pair) => {
   const [key, value] = pair;
 
   if (typeof value === "string") {
@@ -104,5 +106,5 @@ Object.entries(client.cfg.auth).forEach(pair => {
 client.authenticate({
   type: "basic",
   username: client.cfg.auth.username,
-  password: client.cfg.auth.password
+  password: client.cfg.auth.password,
 });

@@ -7,8 +7,8 @@
 
 // Default authentication specified by environment variables
 exports.auth = {
-  username: process.env.USERNAME,
-  password: process.env.PASSWORD,
+  username: process.env.GITHUB_USERNAME,
+  password: process.env.GITUB_PASSWORD,
   webhookSecret: process.env.WEBHOOK_SECRET,
 };
 
@@ -107,7 +107,7 @@ exports.activity = {
 };
 
 // Delay (in seconds) responses to certain events
-exports.eventsDelay = 0;
+exports.eventsDelay = 3;
 
 // Apply custom configuration on top of default configuration
 const custom = require("./config.js");

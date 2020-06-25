@@ -8,6 +8,8 @@ for (const method of Object.keys(client.util)) {
   client.util[method] = client.util[method].bind(client);
 }
 
+console.log(client.cfg.auth);
+
 client.commands = new Map();
 client.events = new Map();
 client.invites = new Map();
@@ -19,7 +21,7 @@ for (const file of commands) {
   const data = require(`./commands/${file}`);
   const [category, name] = data.aliasPath.split(".");
   const aliases = client.cfg.issues.commands[category][name];
-  for (let i = aliases.length; i--;) {
+  for (let i = aliases.length; i--; ) {
     client.commands.set(aliases[i], data);
   }
 }
@@ -28,7 +30,7 @@ const events = fs.readdirSync(`${__dirname}/events`);
 for (const event of events) {
   if (!event.includes(".")) continue;
   const data = require(`./events/${event}`);
-  for (let i = data.events.length; i--;) {
+  for (let i = data.events.length; i--; ) {
     client.events.set(data.events[i], data.run.bind(client));
   }
 }
