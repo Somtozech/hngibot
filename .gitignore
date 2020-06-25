@@ -61,5 +61,4 @@ typings/
 .next
 
 config/secrets.json
-config/config.js
 secret.tar
