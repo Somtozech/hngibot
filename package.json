@@ -2,9 +2,6 @@
   "name": "zulipbot",
   "version": "1.0.0",
   "description": "GitHub workflow-optimizing bot",
-  "engines": {
-    "node": "8 - 10"
-  },
   "scripts": {
     "start": "node ./src/index.js",
     "pretest": "eslint .",
@@ -26,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zulip/zulipbot.git"
+    "url": "https://github.com/Somtozech/hngibot.git"
   },
   "keywords": [
     "zulip",
@@ -34,13 +31,7 @@
     "bots",
     "github",
     "workflow",
-    "zulipbot",
-    "synicalsyntax"
+    "hngibot"
   ],
-  "author": "Cynthia Lin <cynthialin1004@gmail.com> (https://synicalsyntax.com)",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/zulip/zulipbot/issues"
-  },
-  "homepage": "https://github.com/zulip/zulipbot#readme"
+  "license": "Apache-2.0"
 }
