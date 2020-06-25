@@ -19,7 +19,7 @@ module.exports = {
   activity: {
     inactive: "inactive",
     check: {
-      repositories: ["rippleTv/frontend-v2"],
+      repositories: ["rippleTv/frontend-v2", "hngi/sentry-my-customer-backend"],
       interval: 0.1,
       reminder: 0.0069,
       limit: 0.0034,
