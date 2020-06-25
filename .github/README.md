@@ -1,48 +1,25 @@
-# zulipbot
+# hngibot
 
-[![Build Status](https://travis-ci.org/zulip/zulipbot.svg?branch=master)](https://travis-ci.org/zulip/zulipbot)
-[![David](https://img.shields.io/david/zulip/zulipbot.svg)](https://david-dm.org/zulip/zulipbot)
-[![GitHub release](https://img.shields.io/github/release/zulip/zulipbot.svg)](https://github.com/zulip/zulipbot/releases/latest)
-[![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/zulip/zulipbot/blob/master/LICENSE.md)
-[![zulipbot chat](https://img.shields.io/badge/chat-zulip-2c7c6e.svg)](https://chat.zulip.org/#narrow/stream/zulipbot)
+hgnibot is a GitHub workflow bot application
+for the [hng internship](https://hng.tech/) and its repositories.
 
-[@zulipbot](https://github.com/zulipbot) is a GitHub workflow bot application
-for the [Zulip organization](https://zulip.org) and its repositories. Written in
-Node.js, the bot manages issues and pull requests in the repository in order to
-create a better workflow for Zulip contributors.
-
-**zulipbot**'s purpose is to work around various limitations in GitHub’s binary
-permissions and notifications systems to create a better workflow for our
-contributors. It allows anyone to perform issue triage (self-assigning and
-labeling issues), not just the core contributors trusted with full write access
-to the repository (which is the only model GitHub supports). Additionally,
-**zulipbot** monitors the activity of issues and pull requests, notifying
-contributors about new merge conflicts, continuous integration build results,
-inactivity, and more.
-
-## Installation
-
-To install a copy of **zulipbot** on your own GitHub repository, please visit
-the [Installation](https://github.com/zulip/zulipbot/wiki/Installation) page on
-the **zulipbot wiki**.
 
 ## Usage
 
-If you're using the [Zulip project
-configuration](https://github.com/zulip/zulipbot/blob/master/src/zulip_project_config.js)
-(`./config/config-example.js`), see zulipbot's [usage
-instructions](https://zulip.readthedocs.io/en/latest/contributing/zulipbot-usage.html)
-on the Zulip documentation.
+* **Claim an issue** :Comment  `@hngibot claim` on the issue you want to claim; @hngibot will assign you to the issue and label the issue as in progress.
+  * If you’re a new contributor, @zulipbot will give you read-only collaborator access to the repository and leave a welcome message on the issue you claimed.
 
-If you're using your own custom configuration (`./config/config.js` is different
-from the Zulip project configuration), please visit the
-[Commands](https://github.com/zulip/zulipbot/wiki/Commands) page on the
-**zulipbot wiki**.
+* **Track inactive claimed issues** — If a claimed issue has not been updated within a day, `@hngibot` will post a comment on the inactive issue to ask the assignee(s) if they are still working on the issue.
 
-## Contributing
+If you see this comment on an issue you claimed, you should post a comment on the issue to notify `@hngibot` that you’re still working on it.
 
-If you wish to contribute to **zulipbot**, please read our [contributing
-guidelines](CONTRIBUTING.md) for more information.
+If `@hngibot` does not receive a response from the assignee within 3 days of an inactive issue prompt, `@hngibot` will automatically remove the issue’s current assignee(s) and the “in progress” label to allow others to work on an inactive issue
+
+* **Find unclaimed issues** — Use the [GitHub search](https://help.github.com/en/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests) feature to find unclaimed issues by adding one of the following filters to your search:
+
+-label: "in progress" (excludes issues labeled with the in progress label)
+
+no:assignee (shows issues without assignees)
 
 ## License
 
