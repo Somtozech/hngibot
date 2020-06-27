@@ -16,6 +16,25 @@ module.exports = {
       },
     },
   },
+  pulls: {
+    status: {
+      mergeConflicts: {
+        label: "has conflicts",
+        comment: true,
+      },
+    },
+  },
+  references: {
+    required: true,
+    labels: {
+      exclude: [
+        "in progress",
+        "good first issue",
+        "good sprint project",
+        "help wanted",
+      ],
+    },
+  },
   activity: {
     inactive: "inactive",
     check: {
@@ -24,9 +43,9 @@ module.exports = {
         "hngi/sentry-my-customer-backend",
         "hngi/mobileforce-QuickThink",
       ],
-      interval: 0.1,
-      reminder: 0.0069,
-      limit: 0.0034,
+      interval: 3,
+      reminder: 1,
+      limit: 1,
     },
     issues: {
       inProgress: "in progress",
