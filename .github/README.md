@@ -5,12 +5,13 @@ for the [hng internship](https://hng.tech/)
 
 ## Usage
 
-* **Claim an issue** :Comment  `@hngibot claim` on the issue you want to claim; @hngibot will assign you to the issue and label the issue as in progress.
-  * If you’re a new contributor, @zulipbot will give you read-only collaborator access to the repository and leave a welcome message on the issue you claimed.
+- **Claim an issue** :Comment `@hngibot claim` on the issue you want to claim; @hngibot will assign you to the issue and label the issue as in progress.
 
-* **Track inactive claimed issues** — If a claimed issue has not been updated within a day, `@hngibot` will post a comment on the inactive issue to ask the assignee(s) if they are still working on the issue.<br/> If you see this comment on an issue you claimed, you should post a comment on the issue to notify `@hngibot` that you’re still working on it.<br/> If `@hngibot` does not receive a response from the assignee within 3 days of an inactive issue prompt, `@hngibot` will automatically remove the issue’s current assignee(s) and the “in progress” label to allow others to work on an inactive issue
+  - If you’re a new contributor, @hngibot will give you read-only collaborator access to the repository and leave a welcome message on the issue you claimed.
 
-* **Find unclaimed issues** — Use the [GitHub search](https://help.github.com/en/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests) feature to find unclaimed issues by adding one of the following filters to your search:<br/>-label: "in progress" (excludes issues labeled with the in progress label)<br/>no:assignee (shows issues without assignees)
+- **Track inactive claimed issues** — If a claimed issue has not been updated within a day, `@hngibot` will post a comment on the inactive issue to ask the assignee(s) if they are still working on the issue.<br/> If you see this comment on an issue you claimed, you should post a comment on the issue to notify `@hngibot` that you’re still working on it.<br/> If `@hngibot` does not receive a response from the assignee within 3 days of an inactive issue prompt, `@hngibot` will automatically remove the issue’s current assignee(s) and the “in progress” label to allow others to work on an inactive issue
+
+- **Find unclaimed issues** — Use the [GitHub search](https://help.github.com/en/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests) feature to find unclaimed issues by adding one of the following filters to your search:<br/>-label: "in progress" (excludes issues labeled with the in progress label)<br/>no:assignee (shows issues without assignees)
 
 ## License
 
