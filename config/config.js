@@ -23,6 +23,17 @@ module.exports = {
         comment: true,
       },
     },
+    references: {
+      required: true,
+      labels: {
+        exclude: [
+          "in progress",
+          "good first issue",
+          "good sprint project",
+          "help wanted",
+        ],
+      },
+    },
   },
   references: {
     required: true,
