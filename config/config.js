@@ -41,6 +41,7 @@ module.exports = {
       repositories: [
         "rippleTv/frontend-v2",
         "hngi/sentry-my-customer-backend",
+        "hngi/sentry-my-customer-api",
         "hngi/mobileforce-QuickThink",
       ],
       interval: 3,
