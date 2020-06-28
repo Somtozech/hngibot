@@ -7,7 +7,7 @@ module.exports = {
         limit: 1,
         newContributors: {
           permission: "pull",
-          restricted: 1,
+          restricted: 5,
         },
       },
       label: {
