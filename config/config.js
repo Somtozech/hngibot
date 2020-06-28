@@ -54,6 +54,7 @@ module.exports = {
         "hngi/sentry-my-customer-backend",
         "hngi/sentry-my-customer-api",
         "hngi/mobileforce-QuickThink",
+        "hngi/mobileforce-afrivac",
       ],
       interval: 3,
       reminder: 1,
