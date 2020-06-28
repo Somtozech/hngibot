@@ -64,7 +64,7 @@ module.exports = {
       clearClosed: true,
     },
     pulls: {
-      autoUpdate: false,
+      autoUpdate: true,
       reviewed: {
         label: "reviewed",
       },
