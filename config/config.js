@@ -20,7 +20,7 @@ module.exports = {
     status: {
       mergeConflicts: {
         label: "has conflicts",
-        comment: true,
+        comment: false,
       },
     },
     references: {
