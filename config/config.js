@@ -50,11 +50,11 @@ module.exports = {
     inactive: "inactive",
     check: {
       repositories: [
-        "rippleTv/frontend-v2",
-        "hngi/sentry-my-customer-backend",
-        "hngi/sentry-my-customer-api",
-        "hngi/mobileforce-QuickThink",
-        "hngi/mobileforce-afrivac",
+//         "rippleTv/frontend-v2",
+//         "hngi/sentry-my-customer-backend",
+//         "hngi/sentry-my-customer-api",
+//         "hngi/mobileforce-QuickThink",
+//         "hngi/mobileforce-afrivac",
       ],
       interval: 3,
       reminder: 1,
